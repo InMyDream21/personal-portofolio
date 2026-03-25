@@ -13,8 +13,19 @@
     border-radius: 9999px;
     font-size: 0.875rem;
     font-weight: 600;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem; /* Slightly reduced to group visually with the title */
     border: 1px solid var(--accent);
+}
+
+/* NEW CLASS: Styles the SEO H1 to act as a clean sub-headline */
+.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(
+        --gray
+    ); /* Uses your existing gray variable so it doesn't overpower .name */
+    margin-bottom: 0.5rem;
+    max-width: 700px;
 }
 
 .name {
@@ -22,6 +33,7 @@
     line-height: 1.1;
     margin-bottom: 1.5rem;
     max-width: 700px;
+    font-weight: 700; /* Added explicit bolding to ensure the H2 stays the visual focus */
 }
 
 .gradientText {
@@ -82,6 +94,9 @@
 @media (max-width: 768px) {
     .hero {
         padding: 4rem 0;
+    }
+    .title {
+        font-size: 1.125rem; /* Scales down the SEO H1 for mobile */
     }
     .name {
         font-size: 2.75rem;

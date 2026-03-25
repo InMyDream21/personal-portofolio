@@ -1,6 +1,6 @@
-import { skillCategories } from '@/lib/data';
-import { Cpu } from 'lucide-react';
-import styles from './Skills.module.css';
+import { skillCategories } from "@/lib/data";
+import { Cpu } from "lucide-react";
+import styles from "./Skills.module.css";
 
 const Skills = () => {
   return (
@@ -11,8 +11,19 @@ const Skills = () => {
       </div>
       <div className={styles.grid}>
         {skillCategories.map((category, index) => (
-          <div key={index} className={`${styles.category} fade-in stagger-${index + 1}`}>
+          <div
+            key={index}
+            className={`${styles.category} fade-in stagger-${index + 1}`}
+          >
             <h3 className={styles.categoryTitle}>{category.category}</h3>
+
+            {/* NEW: SEO-friendly description text */}
+            {category.description && (
+              <p className={styles.categoryDescription}>
+                {category.description}
+              </p>
+            )}
+
             <div className={styles.skillList}>
               {category.skills.map((skill, idx) => (
                 <span key={idx} className={styles.skillBadge}>
