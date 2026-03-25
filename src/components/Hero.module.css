@@ -1,91 +1,92 @@
 .hero {
-  padding: 8rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+    padding: 8rem 0;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .badge {
-  background: var(--accent-light);
-  color: var(--accent);
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
-  border: 1px solid var(--accent);
+    background: var(--accent-light);
+    color: var(--accent);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    border: 1px solid var(--accent);
 }
 
 .name {
-  font-size: 4rem;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-  max-width: 700px;
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    max-width: 700px;
 }
 
 .gradientText {
-  color: var(--accent);
+    color: var(--accent);
 }
 
 .summary {
-  font-size: 1.25rem;
-  color: var(--gray);
-  max-width: 600px;
-  margin-bottom: 3rem;
-  line-height: 1.6;
+    font-size: 1.25rem;
+    color: var(--gray);
+    max-width: 600px;
+    margin-bottom: 3rem;
+    line-height: 1.6;
 }
 
 .cta {
-  display: flex;
-  gap: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
 }
 
 .button {
-  background: var(--accent);
-  color: #ffffff;
-  padding: 0.875rem 1.75rem;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.39);
+    background: var(--accent);
+    color: #ffffff;
+    padding: 0.875rem 1.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.39);
 }
 
 .button:hover {
-  opacity: 0.95;
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.23);
+    opacity: 0.95;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.23);
 }
 
 .secondaryButton {
-  border: 1px solid var(--card-border);
-  padding: 0.875rem 1.75rem;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 0.875rem 1.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--card-bg);
 }
 
 .secondaryButton:hover {
-  background: var(--gray-light);
-  color: var(--foreground);
-  transform: translateY(-2px);
+    background: var(--gray-light);
+    color: var(--foreground);
+    transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
-  .hero {
-    padding: 4rem 0;
-  }
-  .name {
-    font-size: 2.75rem;
-  }
-  .summary {
-    font-size: 1.125rem;
-  }
+    .hero {
+        padding: 4rem 0;
+    }
+    .name {
+        font-size: 2.75rem;
+    }
+    .summary {
+        font-size: 1.125rem;
+    }
 }

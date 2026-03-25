@@ -1,90 +1,115 @@
 .grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
 }
 
 .sectionHeader {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.cardTitle {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray);
+    border-left: 4px solid var(--accent);
+    padding-left: 1rem;
 }
 
 .icon {
-  color: var(--accent);
+    color: var(--accent);
 }
 
-.card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: var(--shadow);
-  transition: all 0.2s ease;
-  margin-bottom: 1.5rem;
+.columnCard {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: all 0.2s ease;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent);
+.columnCard:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
 }
 
-.institution, .awardTitle {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: var(--foreground);
+.item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--gray-light);
 }
 
-.degree, .awardDesc {
-  font-size: 1rem;
-  color: var(--gray-dark);
-  margin-bottom: 1rem;
-  line-height: 1.5;
+.item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.institution,
+.awardTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--foreground);
+}
+
+.degree,
+.awardDesc {
+    font-size: 1rem;
+    color: var(--gray-dark);
+    margin-bottom: 1rem;
+    line-height: 1.5;
 }
 
 .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
 }
 
-.period, .awardDate {
-  font-size: 0.875rem;
-  color: var(--gray);
-  font-weight: 600;
+.period,
+.awardDate {
+    font-size: 0.875rem;
+    color: var(--gray);
+    font-weight: 600;
 }
 
 .gpa {
-  background: var(--accent-light);
-  color: var(--accent);
-  padding: 0.25rem 0.75rem;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  font-weight: 700;
+    background: var(--accent-light);
+    color: var(--accent);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
 }
 
 .location {
-  font-size: 0.875rem;
-  color: var(--gray);
+    font-size: 0.875rem;
+    color: var(--gray);
 }
 
 .projectBadge {
-  background: var(--gray-light);
-  color: var(--gray-dark);
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  border: 1px dashed var(--card-border);
+    background: var(--gray-light);
+    color: var(--gray-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border: 1px dashed var(--card-border);
 }
 
 @media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
 }

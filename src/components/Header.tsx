@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import { Github, Linkedin, Mail } from 'lucide-react';
-import styles from './Header.module.css';
+import Link from "next/link";
+import { Github, Linkedin, Mail } from "lucide-react";
+import styles from "./Header.module.css";
 
 const Header = () => {
   return (
@@ -15,10 +15,20 @@ const Header = () => {
           <a href="#education">Education</a>
           <div className={styles.divider} />
           <div className={styles.socials}>
-            <a href="https://github.com/InMyDream21" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a
+              href="https://github.com/InMyDream21"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
               <Github size={18} />
             </a>
-            <a href="https://linkedin.com/in/ahmed-nizhan-haikal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a
+              href="https://www.linkedin.com/in/nizhan-haikal/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
               <Linkedin size={18} />
             </a>
           </div>
