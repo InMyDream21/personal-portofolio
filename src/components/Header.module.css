@@ -1,0 +1,70 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--card-border);
+  height: 4rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: -0.05em;
+  color: var(--accent);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.links a {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray);
+}
+
+.links a:hover {
+  color: var(--foreground);
+}
+
+.divider {
+  width: 1px;
+  height: 1.25rem;
+  background: var(--card-border);
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.socials a {
+  color: var(--gray);
+  display: flex;
+  align-items: center;
+}
+
+.socials a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .links {
+    gap: 1rem;
+  }
+  .divider {
+    display: none;
+  }
+  .socials {
+    display: none;
+  }
+}
