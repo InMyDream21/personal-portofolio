@@ -39,9 +39,22 @@ export const personalInfo = {
 
 export const experiences = [
   {
+    company: "Sagara Technology",
+    role: "Fullstack Developer",
+    period: "May 2026 - Present",
+    type: "Full-time",
+    location: "BSD, Indonesia",
+    responsibilities: [
+      "Architected and developed a high-performance full-stack web application using a monorepo structure ( pnpm workspaces ) powered by React 19 (TanStack Start) for the frontend and ElysiaJS on the Bun runtime for the backend.",
+      "Designed and optimized a PostgreSQL database with PostGIS extensions to process and query geospatial vehicle tracking and location-based alert data, utilizing Prisma ORM for type-safe database interactions.",
+      "Engineered secure authentication flows using a zero-dependency JWT system (Web Crypto API) and built an isomorphic HTTP client featuring automated token refresh with cross-tab lock coordination.",
+      "Implemented type-safe state management and routing using TanStack Query and TanStack Router, creating a responsive and localized user interface with Ant Design v6, Tailwind CSS v4, and Paraglide (i18n).",
+    ],
+  },
+  {
     company: "K-Appraisal",
     role: "Software Developer",
-    period: "Feb 2026 - Present",
+    period: "Feb 2026 - April 2026",
     type: "Full-time",
     location: "Jakarta, Indonesia",
     responsibilities: [
