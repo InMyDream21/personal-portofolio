@@ -81,7 +81,6 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 0.5rem;
 }
 
 .company {
@@ -95,14 +94,13 @@
     color: var(--gray);
     font-weight: 600;
     background: var(--gray-light);
-    padding: 0.25rem 0.75rem;
     border-radius: 999px;
 }
 
 .subHeader {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.5rem;
     border-bottom: 1px solid var(--gray-light);
     padding-bottom: 1rem;
 }
@@ -134,7 +132,7 @@
 }
 
 .highlights li::before {
-    content: "→";
+    content: "•";
     position: absolute;
     left: 0;
     color: var(--accent);
