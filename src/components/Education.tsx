@@ -1,12 +1,12 @@
 import { education, awards } from '@/lib/data';
-import { GraduationCap, Trophy } from 'lucide-react';
+import { GraduationCap } from 'lucide-react';
 import styles from './Education.module.css';
 
 const Education = () => {
   return (
-    <section id="education" className="container">
+    <section id="education" className="container" aria-label="Education and background">
       <div className={styles.sectionHeader}>
-        <GraduationCap className={styles.icon} />
+        <GraduationCap className={styles.icon} aria-hidden />
         <h2>Education & Background</h2>
       </div>
       <div className={styles.grid}>
@@ -15,7 +15,7 @@ const Education = () => {
           <div className={styles.list}>
             {education.map((edu, index) => (
               <div key={index} className={styles.item}>
-                <h3 className={styles.institution}>{edu.institution}</h3>
+                <h4 className={styles.institution}>{edu.institution}</h4>
                 <p className={styles.degree}>{edu.degree}</p>
                 <div className={styles.footer}>
                   <span className={styles.period}>{edu.period}</span>
@@ -31,13 +31,13 @@ const Education = () => {
           <div className={styles.list}>
             {awards.map((award, index) => (
               <div key={index} className={styles.item}>
-                <h3 className={styles.awardTitle}>{award.title}</h3>
-              <p className={styles.awardDesc}>{award.description}</p>
-              {award.project && (
-                <div className={styles.projectBadge}>
-                  Project: {award.project}
-                </div>
-              )}
+                <h4 className={styles.awardTitle}>{award.title}</h4>
+                <p className={styles.awardDesc}>{award.description}</p>
+                {award.project && (
+                  <div className={styles.projectBadge}>
+                    Project: {award.project}
+                  </div>
+                )}
                 <span className={styles.awardDate}>{award.date}</span>
               </div>
             ))}

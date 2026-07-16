@@ -84,7 +84,7 @@
 
 .gpa {
     background: var(--accent-light);
-    color: var(--accent);
+    color: var(--accent-text);
     padding: 0.25rem 0.75rem;
     border-radius: 999px;
     font-size: 0.75rem;

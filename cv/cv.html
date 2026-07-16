@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Ahmed Nizhan Haikal - CV</title>
+<style>
+  :root {
+    --ink: #000000;
+    --muted: #444444;
+    --line: #999999;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  @page { size: A4; margin: 14mm 15mm; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    font-size: 10.2pt;
+    line-height: 1.42;
+  }
+  a { color: var(--ink); text-decoration: none; }
+
+  /* Header */
+  .name { font-size: 23pt; font-weight: 800; letter-spacing: -0.5px; }
+  .role { font-size: 11.5pt; font-weight: 600; margin-top: 2px; }
+  .contact { margin-top: 6px; font-size: 9pt; color: var(--muted); }
+  .contact span { white-space: nowrap; }
+  .sep { color: var(--line); margin: 0 6px; }
+
+  /* Sections */
+  section { margin-top: 15px; }
+  h2 {
+    font-size: 10pt; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px;
+    color: var(--ink); padding-bottom: 3px; border-bottom: 1.5px solid var(--ink);
+    margin-bottom: 8px;
+  }
+  .summary { color: var(--muted); }
+
+  .entry { margin-bottom: 10px; }
+  .entry:last-child { margin-bottom: 0; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .org { font-weight: 700; font-size: 10.6pt; }
+  .when { font-size: 8.8pt; color: var(--muted); white-space: nowrap; font-weight: 600; }
+  .sub { display: flex; justify-content: space-between; gap: 10px; margin-top: 1px; }
+  .pos { font-weight: 600; font-size: 9.6pt; }
+  .loc { font-size: 8.8pt; color: var(--muted); }
+  ul { margin: 5px 0 0 0; padding-left: 15px; }
+  li { margin-bottom: 2.5px; }
+  li::marker { color: var(--ink); }
+
+  .skillrow { margin-bottom: 5px; }
+  .skillrow b { display: inline-block; min-width: 155px; }
+  .tags { color: var(--muted); }
+
+  .entry, li, .row { page-break-inside: avoid; }
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="name">Ahmed Nizhan Haikal</div>
+    <div class="role">Backend &amp; Full-Stack Developer</div>
+    <div class="contact">
+      <span>Jakarta, Indonesia</span><span class="sep">|</span>
+      <span>+62 851-5627-1326</span><span class="sep">|</span>
+      <span>ahmed.nizhan@gmail.com</span><span class="sep">|</span>
+      <span><a href="https://www.nizhan.dev">nizhan.dev</a></span><span class="sep">|</span>
+      <span><a href="https://www.linkedin.com/in/nizhan-haikal/">linkedin.com/in/nizhan-haikal</a></span><span class="sep">|</span>
+      <span><a href="https://github.com/InMyDream21">github.com/InMyDream21</a></span>
+    </div>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p class="summary">Software engineer who builds full-stack and backend systems end to end, ranging from a geospatial vehicle-tracking platform to event-driven microservices, with .NET, Node.js, Java, and React. Focused on clean data models, secure authentication, and APIs that hold up in production.</p>
+  </section>
+
+  <section>
+    <h2>Work Experience</h2>
+
+    <div class="entry">
+      <div class="row"><span class="org">Sagara Technology</span><span class="when">May 2026 - Present</span></div>
+      <div class="sub"><span class="pos">Fullstack Developer &middot; Full-time</span><span class="loc">BSD, Indonesia</span></div>
+      <ul>
+        <li>Built a full-stack logistics platform that handled <b>1,000+ orders a day</b> with live location tracking for every vehicle and order, using a React 19 (TanStack Start) frontend and an ElysiaJS/Bun backend in a pnpm monorepo.</li>
+        <li>Improved routing accuracy by mining historical location data to generate GraphHopper via-points between stops, so routes followed the best path learned from past trips.</li>
+        <li>Modeled the geospatial data in PostgreSQL with PostGIS (through Prisma) to store and query live vehicle positions and location-based alerts.</li>
+        <li>Built secure JWT authentication (Web Crypto API) with automatic token refresh coordinated across browser tabs.</li>
+        <li>Delivered a responsive, localized interface using TanStack Query and Router, Ant Design, and Tailwind CSS.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="row"><span class="org">K-Appraisal</span><span class="when">Feb 2026 - Apr 2026</span></div>
+      <div class="sub"><span class="pos">Software Developer &middot; Full-time</span><span class="loc">Jakarta, Indonesia</span></div>
+      <ul>
+        <li>Engineered a scalable full-stack business-digitalization platform using React and .NET to streamline enterprise workflows.</li>
+        <li>Architected database schemas and system data flows for a distributed microservices architecture, ensuring high availability.</li>
+        <li>Implemented secure authentication, CRUD operations, and strict Role-Based Access Control (RBAC).</li>
+        <li>Developed dynamic PDF generation with templating capabilities for flexible business needs.</li>
+        <li>Built event-driven services using RabbitMQ for streamlined business workflows.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="row"><span class="org">Apple Developer Academy</span><span class="when">Mar 2025 - Dec 2025</span></div>
+      <div class="sub"><span class="pos">Apple Platform Developer &middot; Internship</span><span class="loc">South Tangerang, Indonesia</span></div>
+      <ul>
+        <li>Engineered native iOS and iPadOS applications with Swift, SwiftUI, and SwiftData, focused on reactive, user-centric interfaces.</li>
+        <li>Participated in end-to-end product lifecycles, translating user research and prototyping into functional UI/UX designs.</li>
+        <li>Architected cloud-based backend services and REST APIs with FastAPI and Supabase for real-time data synchronization.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="row"><span class="org">Alto Network</span><span class="when">Sep 2024 - Dec 2024</span></div>
+      <div class="sub"><span class="pos">Backend Developer &middot; Internship</span><span class="loc">Jakarta, Indonesia</span></div>
+      <ul>
+        <li>Developed backend APIs and internal reporting systems with Java Spring Boot, optimizing secure data retrieval.</li>
+        <li>Created ERD and DFD documentation to bridge business requirements with technical system implementations.</li>
+        <li>Collaborated cross-functionally to ensure data accuracy, system reliability, and seamless API integrations.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="row"><span class="org">Bakrie Center Foundation</span><span class="when">Feb 2024 - Jul 2024</span></div>
+      <div class="sub"><span class="pos">Software Engineer &middot; Internship</span><span class="loc">Jakarta, Indonesia</span></div>
+      <ul>
+        <li>Designed and implemented a highly normalized MySQL schema to securely support core application features.</li>
+        <li>Built scalable RESTful backend services with Node.js to handle complex business logic and streamline data access.</li>
+        <li>Acted as technical PIC, coordinating tasks, conducting code reviews, and communicating requirements with stakeholders.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Selected Projects</h2>
+    <div class="entry">
+      <div class="row"><span class="org">Medical Visual Question Answering</span><span class="when">Freelance</span></div>
+      <ul>
+        <li>Built a medical visual-question-answering system with TensorFlow, a custom image-upload interface, and a medical knowledge-base API integration. <span class="tags">(Python, TensorFlow, Medical AI)</span></li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="row"><span class="org">Contraction Timer iOS App</span><span class="when">Freelance</span></div>
+      <ul>
+        <li>Designed and shipped a native iOS utility with a reactive UI for tracking contraction frequency, custom tab views, and swipe-to-edit/delete actions. <span class="tags">(SwiftUI, Reactive UI)</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skillrow"><b>Backend &amp; APIs</b> <span class="tags">C#, .NET, Node.js, Java, Spring Boot, Python, FastAPI, Go</span></div>
+    <div class="skillrow"><b>Frontend &amp; Mobile</b> <span class="tags">React, TypeScript, TanStack, Tailwind CSS, Swift, SwiftUI, SwiftData</span></div>
+    <div class="skillrow"><b>Data &amp; Architecture</b> <span class="tags">PostgreSQL, MySQL, Prisma, Supabase, RabbitMQ, Microservices</span></div>
+  </section>
+
+  <section>
+    <h2>Education &amp; Awards</h2>
+    <div class="entry">
+      <div class="row"><span class="org">Universitas Pembangunan Nasional Veteran Jakarta</span><span class="when">Aug 2021 - Sep 2025</span></div>
+      <div class="sub"><span class="pos">Bachelor of Computer Science &middot; GPA 3.87 / 4.0</span><span class="loc">Jakarta, Indonesia</span></div>
+    </div>
+    <div class="entry">
+      <div class="row"><span class="org">Gemastik Finalist</span><span class="when">Nov 2022</span></div>
+      <div class="sub"><span class="pos">Top 10 nationally in the Kemendikbudristek IT competition</span><span class="loc">Project: ANKERSAL</span></div>
+    </div>
+  </section>
+
+</body>
+</html>

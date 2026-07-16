@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
+import { personalInfo } from "@/lib/data";
 import styles from "./Header.module.css";
 
 const Header = () => {
@@ -11,25 +12,26 @@ const Header = () => {
         </Link>
         <div className={styles.links}>
           <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
           <a href="#education">Education</a>
           <div className={styles.divider} />
           <div className={styles.socials}>
             <a
-              href="https://github.com/InMyDream21"
+              href={personalInfo.github}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="GitHub"
+              aria-label="GitHub (opens in new tab)"
             >
-              <Github size={18} />
+              <Github size={18} aria-hidden />
             </a>
             <a
-              href="https://www.linkedin.com/in/nizhan-haikal/"
+              href={personalInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="LinkedIn"
+              aria-label="LinkedIn (opens in new tab)"
             >
-              <Linkedin size={18} />
+              <Linkedin size={18} aria-hidden />
             </a>
           </div>
         </div>

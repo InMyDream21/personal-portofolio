@@ -3,7 +3,7 @@ import styles from "./Projects.module.css";
 
 const Projects = () => {
   return (
-    <section className="container fade-in" id="projects">
+    <section className="container fade-in" id="projects" aria-label="Projects">
       <div className={styles.header}>
         <h2 className={styles.sectionTitle}>Freelance & Selected Projects</h2>
         <p className={styles.sectionSubtitle}>

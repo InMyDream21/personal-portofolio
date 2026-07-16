@@ -4,9 +4,9 @@ import styles from "./Skills.module.css";
 
 const Skills = () => {
   return (
-    <section id="skills" className="container">
+    <section id="skills" className="container" aria-label="Skills and expertise">
       <div className={styles.sectionHeader}>
-        <Cpu className={styles.icon} />
+        <Cpu className={styles.icon} aria-hidden />
         <h2>Skills & Expertise</h2>
       </div>
       <div className={styles.grid}>

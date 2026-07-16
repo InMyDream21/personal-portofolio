@@ -24,20 +24,27 @@ export interface Award {
 
 export interface SkillCategory {
   category: string;
+  description: string;
   skills: string[];
 }
 
 export const personalInfo = {
   name: "Ahmed Nizhan Haikal",
+  jobTitle: "Backend & Full-Stack Developer",
+  location: "Jakarta, Indonesia",
+  siteUrl: "https://www.nizhan.dev",
+  resume: "/ahmed-nizhan-haikal-cv.pdf",
   email: "ahmed.nizhan@gmail.com",
-  phone: "+6285156271326",
   github: "https://github.com/InMyDream21",
-  linkedin: "https://linkedin.com/in/ahmed-nizhan-haikal", // Assuming standard LinkedIn URL
+  linkedin: "https://www.linkedin.com/in/nizhan-haikal/",
+  // Short, SERP-safe (<160 chars). Full version lives in `summary` for on-page copy.
+  metaDescription:
+    "Backend & full-stack developer building scalable APIs and systems with .NET, Node.js, Java, and React. CS graduate with internship and real-world experience.",
   summary:
-    "Computer Science graduate with experience building full-stack and backend systems using .NET, Node.js, and Java. Experienced in API development, database design, and microservice architectures. Fast learner with internship and real-world development experience.",
+    "Software engineer who builds full-stack and backend systems end to end ranging from a geospatial vehicle-tracking platform to event-driven microservices with .NET, Node.js, Java, and React. I care about clean data models, secure authentication, and APIs that hold up in production.",
 };
 
-export const experiences = [
+export const experiences: Experience[] = [
   {
     company: "Sagara Technology",
     role: "Fullstack Developer",
@@ -45,23 +52,25 @@ export const experiences = [
     type: "Full-time",
     location: "BSD, Indonesia",
     responsibilities: [
-      "Architected and developed a high-performance full-stack web application using a monorepo structure ( pnpm workspaces ) powered by React 19 (TanStack Start) for the frontend and ElysiaJS on the Bun runtime for the backend.",
-      "Designed and optimized a PostgreSQL database with PostGIS extensions to process and query geospatial vehicle tracking and location-based alert data, utilizing Prisma ORM for type-safe database interactions.",
-      "Engineered secure authentication flows using a zero-dependency JWT system (Web Crypto API) and built an isomorphic HTTP client featuring automated token refresh with cross-tab lock coordination.",
-      "Implemented type-safe state management and routing using TanStack Query and TanStack Router, creating a responsive and localized user interface with Ant Design v6, Tailwind CSS v4, and Paraglide (i18n).",
+      "Built a full-stack logistics platform that handled 1,000+ orders a day with live location tracking for every vehicle and order, using a React 19 (TanStack Start) frontend and an ElysiaJS/Bun backend in a pnpm monorepo.",
+      "Improved routing accuracy by mining location data and generating GraphHopper via-points between stops, so routes followed best routing from historical data.",
+      "Modeled the geospatial data in PostgreSQL with PostGIS (through Prisma) to store and query live vehicle positions and location-based alerts.",
+      "Built secure JWT authentication (Web Crypto API) with automatic token refresh coordinated across browser tabs.",
+      "Delivered a responsive, localized interface using TanStack Query and Router, Ant Design, and Tailwind CSS.",
     ],
   },
   {
     company: "K-Appraisal",
     role: "Software Developer",
-    period: "Feb 2026 - April 2026",
+    period: "Feb 2026 - Apr 2026",
     type: "Full-time",
     location: "Jakarta, Indonesia",
     responsibilities: [
       "Engineered a scalable full-stack business digitalization platform using React and .NET to streamline enterprise workflows.",
       "Architected database schemas and system data flows for a distributed microservices architecture, ensuring high availability.",
       "Implemented secure authentication, CRUD operations, and strict Role-Based Access Control (RBAC) protocols.",
-      "Developed an event-driven dynamic PDF generation service utilizing RabbitMQ for asynchronous processing and automated reporting.",
+      "Developed dynamic PDF generation with templating capabilities for flexible business needs.",
+      "Built event-driven services using RabbitMQ for streamlined business workflows.",
     ],
   },
   {
@@ -117,29 +126,53 @@ export const awards: Award[] = [
     title: "Gemastik Finalist",
     date: "Nov 2022",
     description:
-      "Gemastik Finalist, Top 10 National Competition (Kemendikbudristek) | 2022",
+      "Top 10 nationally in Kemendikbudristek's Gemastik IT competition.",
     project: "ANKERSAL (Bootstrap, PHP)",
   },
 ];
 
-export const skillCategories = [
+export const skillCategories: SkillCategory[] = [
   {
     category: "Backend & API Development",
     description:
       "Architecting scalable microservices, RESTful APIs, and event-driven systems.",
-    skills: ["C#", ".NET", "Node.js", "Java", "Go", "Python"],
+    skills: [
+      "C#",
+      ".NET",
+      "Node.js",
+      "Java",
+      "Spring Boot",
+      "Python",
+      "FastAPI",
+      "Go",
+    ],
   },
   {
     category: "Frontend & Mobile",
     description:
       "Building reactive web interfaces and native iOS applications with custom UI components.",
-    skills: ["React", "TypeScript", "Swift", "SwiftUI"],
+    skills: [
+      "React",
+      "TypeScript",
+      "TanStack",
+      "Tailwind CSS",
+      "Swift",
+      "SwiftUI",
+      "SwiftData",
+    ],
   },
   {
     category: "Database & Architecture",
     description:
       "Designing normalized schemas and managing data flow for complex applications.",
-    skills: ["MySQL", "Supabase", "RabbitMQ", "Microservices"],
+    skills: [
+      "PostgreSQL",
+      "MySQL",
+      "Prisma",
+      "Supabase",
+      "RabbitMQ",
+      "Microservices",
+    ],
   },
   {
     category: "Soft Skills & Leadership",

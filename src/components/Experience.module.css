@@ -108,7 +108,7 @@
 .role {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--accent);
+    color: var(--accent-text);
 }
 
 .location {

@@ -4,9 +4,9 @@ import styles from "./Experience.module.css";
 
 const Experience = () => {
   return (
-    <section id="experience" className="container">
+    <section id="experience" className="container" aria-label="Work experience">
       <div className={styles.sectionHeader}>
-        <Briefcase className={styles.icon} />
+        <Briefcase className={styles.icon} aria-hidden />
         <h2>Work Experience</h2>
       </div>
       <div className={styles.timeline}>
@@ -15,33 +15,23 @@ const Experience = () => {
             key={index}
             className={`${styles.item} fade-in stagger-${index + 1}`}
           >
-            <div
-              className={styles.card}
-              itemScope
-              itemType="https://schema.org/EmployeeRole"
-            >
+            <div className={styles.card}>
               <div className={styles.header}>
-                <h3 className={styles.company} itemProp="employerName">
-                  {exp.company}
-                </h3>
+                <h3 className={styles.company}>{exp.company}</h3>
                 <span className={styles.period}>{exp.period}</span>
               </div>
               <div className={styles.subHeader}>
-                <span className={styles.role} itemProp="roleName">
-                  {exp.role}
-                </span>
+                <span className={styles.role}>{exp.role}</span>
                 {exp.location && (
                   <span className={styles.location}>
-                    <MapPin size={14} /> {exp.location}
+                    <MapPin size={14} aria-hidden /> {exp.location}
                   </span>
                 )}
               </div>
 
               <ul className={styles.highlights}>
                 {exp.responsibilities.map((highlight, idx) => (
-                  <li key={idx} itemProp="description">
-                    {highlight}
-                  </li>
+                  <li key={idx}>{highlight}</li>
                 ))}
               </ul>
             </div>
