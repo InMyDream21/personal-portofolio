@@ -52,7 +52,7 @@ export const experiences: Experience[] = [
     type: "Full-time",
     location: "BSD, Indonesia",
     responsibilities: [
-      "Built a full-stack logistics platform that handled 1,000+ orders a day with live location tracking for every vehicle and order, using a React 19 (TanStack Start) frontend and an ElysiaJS/Bun backend in a pnpm monorepo.",
+      "Built a full-stack logistics platform that handled 5,000+ orders a day with live location tracking for every vehicle in its respective order, using a React 19 (TanStack Start) frontend and an ElysiaJS/Bun backend in a pnpm monorepo.",
       "Improved routing accuracy by mining location data and generating GraphHopper via-points between stops, so routes followed best routing from historical data.",
       "Modeled the geospatial data in PostgreSQL with PostGIS (through Prisma) to store and query live vehicle positions and location-based alerts.",
       "Built secure JWT authentication (Web Crypto API) with automatic token refresh coordinated across browser tabs.",
