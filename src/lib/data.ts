@@ -41,22 +41,22 @@ export const personalInfo = {
   metaDescription:
     "Backend & full-stack developer building scalable APIs and systems with .NET, Node.js, Java, and React. CS graduate with internship and real-world experience.",
   summary:
-    "Software engineer who builds full-stack and backend systems end to end ranging from a geospatial vehicle-tracking platform to event-driven microservices with .NET, Node.js, Java, and React. I care about clean data models, secure authentication, and APIs that hold up in production.",
+    "Full-Stack & Backend Engineer with extensive experience architecting event-driven microservices, high-throughput APIs, and distributed data systems using .NET Core, Java Spring Boot, Node.js/Bun, and PostgreSQL/PostGIS. Proven track record of scaling logistics and enterprise platforms to 5,000+ daily orders and implementing secure RBAC, asynchronous messaging via RabbitMQ, and geospatial indexing. CS graduate (3.87 GPA) and Apple Developer Academy alumnus experienced in cross-functional agile teams.",
 };
 
 export const experiences: Experience[] = [
   {
     company: "Sagara Technology",
-    role: "Fullstack Developer",
+    role: "Fullstack Developer (Outsource at Treffix)",
     period: "May 2026 - Present",
     type: "Full-time",
     location: "BSD, Indonesia",
     responsibilities: [
-      "Built a full-stack logistics platform that handled 5,000+ orders a day with live location tracking for every vehicle in its respective order, using a React 19 (TanStack Start) frontend and an ElysiaJS/Bun backend in a pnpm monorepo.",
-      "Improved routing accuracy by mining location data and generating GraphHopper via-points between stops, so routes followed best routing from historical data.",
-      "Modeled the geospatial data in PostgreSQL with PostGIS (through Prisma) to store and query live vehicle positions and location-based alerts.",
-      "Built secure JWT authentication (Web Crypto API) with automatic token refresh coordinated across browser tabs.",
-      "Delivered a responsive, localized interface using TanStack Query and Router, Ant Design, and Tailwind CSS.",
+      "Scaled end-to-end logistics platform throughput to handle 5,000+ daily active orders by engineering a high-performance backend with ElysiaJS/Bun and a React 19 (TanStack Start) frontend in a pnpm monorepo.",
+      "Boosted routing efficiency and delivery precision by extracting historical tracking data and dynamically calculating GraphHopper via-points between designated route stops.",
+      "Optimized spatial query latency for real-time fleet positions and boundary triggers by architecting geospatial schemas in PostgreSQL/PostGIS using Prisma.",
+      "Strengthened client-side session security by building a cross-tab synchronized JWT authentication system using native Web Crypto APIs with silent token refresh.",
+      "Enhanced user experience through a localized, responsive dashboard featuring real-time data visualization and simplified workflows.",
     ],
   },
   {
@@ -66,11 +66,11 @@ export const experiences: Experience[] = [
     type: "Full-time",
     location: "Jakarta, Indonesia",
     responsibilities: [
-      "Engineered a scalable full-stack business digitalization platform using React and .NET to streamline enterprise workflows.",
-      "Architected database schemas and system data flows for a distributed microservices architecture, ensuring high availability.",
-      "Implemented secure authentication, CRUD operations, and strict Role-Based Access Control (RBAC) protocols.",
-      "Developed dynamic PDF generation with templating capabilities for flexible business needs.",
-      "Built event-driven services using RabbitMQ for streamlined business workflows.",
+      "Architected scalable enterprise microservices across core business domains using ASP.NET Core and React, decoupling monolithic workflows into maintainable distributed services.",
+      "Decoupled high-volume asynchronous tasks by implementing event-driven message queuing with RabbitMQ, preventing workflow bottlenecks and ensuring eventual consistency across services.",
+      "Hardened enterprise API security by engineering fine-grained Role-Based Access Control (RBAC) and JWT validation across all service entry points.",
+      "Automated reporting workflows by building a dynamic PDF generation engine supporting customized business templates, eliminating manual report assembly.",
+      "Enhanced data reliability and transaction integrity by normalizing relational database schemas and establishing structured repository patterns in C#/.NET.",
     ],
   },
   {
@@ -80,8 +80,8 @@ export const experiences: Experience[] = [
     type: "Internship",
     location: "South Tangerang, Indonesia",
     responsibilities: [
-      "Engineered native iOS and iPadOS applications utilizing Swift, SwiftUI, and SwiftData with a focus on reactive, user-centric interfaces.",
-      "Participated in end-to-end product lifecycles, translating user research and prototyping into highly functional UI/UX designs.",
+      "Shipped production-grade native iOS/iPadOS applications utilizing Swift, SwiftUI, and SwiftData, prioritizing reactive UIs, data persistence, and fluid user interactions.",
+      "Drove end-to-end product delivery cycles within an agile environment, iterating from rapid interactive prototyping and user research to final app builds.",
       "Architected cloud-based backend services and REST APIs leveraging FastAPI and Supabase for real-time data synchronization.",
     ],
   },
@@ -92,8 +92,8 @@ export const experiences: Experience[] = [
     type: "Internship",
     location: "Jakarta, Indonesia",
     responsibilities: [
-      "Developed robust backend APIs and internal reporting systems utilizing Java Spring Boot, optimizing secure data retrieval.",
-      "Created comprehensive ERD and DFD documentation to bridge complex business requirements with technical system implementations.",
+      "Engineered robust RESTful backend services and reporting systems with Java Spring Boot to facilitate secure, high-integrity financial network data processing.",
+      "Accelerated developer onboarding and feature delivery by creating standardized ERD and DFD technical documentation across complex integration touchpoints.",
       "Collaborated cross-functionally to ensure strict data accuracy, system reliability, and seamless API integrations.",
     ],
   },
@@ -104,9 +104,9 @@ export const experiences: Experience[] = [
     type: "Internship",
     location: "Jakarta, Indonesia",
     responsibilities: [
-      "Designed and implemented a highly normalized MySQL database schema to securely support core application features.",
-      "Built scalable RESTful backend services using Node.js to handle complex business logic and streamline data access.",
-      "Acted as technical PIC, coordinating development tasks, conducting code reviews, and effectively communicating requirements with stakeholders.",
+      "Led technical project execution and team delivery as PIC, coordinating sprint milestones, conducting code reviews, and aligning business requirements with engineering output.",
+      "Architected normalized MySQL database schemas to secure mission-critical data models and minimize transactional redundancy.",
+      "Developed scalable Node.js REST APIs to power core institutional application workflows and streamline client-side data access.",
     ],
   },
 ];

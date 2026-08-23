@@ -73,6 +73,7 @@
             }
             .summary {
                 color: var(--muted);
+                text-align: justify;
             }
 
             .entry {
@@ -122,20 +123,47 @@
                 color: var(--ink);
             }
 
-            .skillrow {
-                margin-bottom: 5px;
+            .skill-category {
+                display: flex;
+                align-items: flex-start;
+                gap: 8px;
+                margin-bottom: 6px;
             }
-            .skillrow b {
-                display: inline-block;
-                min-width: 155px;
+            .skill-category:last-child {
+                margin-bottom: 0;
             }
-            .tags {
-                color: var(--muted);
+            .skill-label {
+                font-weight: 700;
+                font-size: 9pt;
+                color: var(--ink);
+                min-width: 145px;
+                padding-top: 1.5px;
+                flex-shrink: 0;
+            }
+            .skill-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 4px 5px;
+                flex: 1;
+            }
+            .skill-pill {
+                display: inline-flex;
+                align-items: center;
+                font-size: 8.3pt;
+                font-weight: 500;
+                color: #1e2022;
+                background-color: #f3f4f6;
+                border: 1px solid #e0e3e7;
+                border-radius: 3.5px;
+                padding: 1px 6px;
+                line-height: 1.35;
+                white-space: nowrap;
             }
 
             .entry,
             li,
-            .row {
+            .row,
+            .skill-category {
                 page-break-inside: avoid;
             }
         </style>
@@ -166,11 +194,7 @@
         <section>
             <h2>Summary</h2>
             <p class="summary">
-                Software engineer who builds full-stack and backend systems end
-                to end, ranging from a geospatial vehicle-tracking platform to
-                event-driven microservices, with .NET, Node.js, Java, and React.
-                Focused on clean data models, secure authentication, and APIs
-                that hold up in production.
+                Full-Stack &amp; Backend Engineer with extensive experience architecting event-driven microservices, high-throughput APIs, and distributed data systems using .NET Core, Java Spring Boot, Node.js/Bun, and PostgreSQL/PostGIS. Proven track record of scaling logistics and enterprise platforms to 5,000+ daily orders and implementing secure RBAC, asynchronous messaging via RabbitMQ, and geospatial indexing. CS graduate (3.87 GPA) and Apple Developer Academy alumnus experienced in cross-functional agile teams.
             </p>
         </section>
 
@@ -179,158 +203,112 @@
 
             <div class="entry">
                 <div class="row">
-                    <span class="org">Sagara Technology</span
-                    ><span class="when">May 2026 - Present</span>
+                    <span class="org">Sagara Technology</span><span class="when">May 2026 - Present</span>
                 </div>
                 <div class="sub">
-                    <span class="pos"
-                        >Fullstack Developer &middot; Full-time</span
-                    ><span class="loc">BSD, Indonesia</span>
+                    <span class="pos">Fullstack Developer (Outsource at Treffix) &middot; Full-time</span><span class="loc">BSD, Indonesia</span>
                 </div>
                 <ul>
                     <li>
-                        Built a full-stack logistics platform that handled
-                        <b>5,000+ orders a day</b> with live location tracking
-                        for every vehicle in its respective order, using a React
-                        19 (TanStack Start) frontend and an ElysiaJS/Bun backend
-                        in a pnpm monorepo.
+                        <b>Scaled end-to-end logistics platform throughput</b> to handle 5,000+ daily active orders by engineering a high-performance backend with ElysiaJS/Bun and a React 19 (TanStack Start) frontend in a pnpm monorepo.
                     </li>
                     <li>
-                        Improved routing accuracy by mining historical location
-                        data to generate GraphHopper via-points between stops,
-                        so routes followed best routing from historical data.
+                        <b>Boosted routing efficiency and delivery precision</b> by extracting historical tracking data and dynamically calculating GraphHopper via-points between designated route stops.
                     </li>
                     <li>
-                        Modeled the geospatial data in PostgreSQL with PostGIS
-                        (through Prisma) to store and query live vehicle
-                        positions and location-based alerts.
+                        <b>Optimized spatial query latency for real-time fleet positions and boundary triggers</b> by architecting geospatial schemas in PostgreSQL/PostGIS using Prisma.
                     </li>
                     <li>
-                        Built secure JWT authentication (Web Crypto API) with
-                        automatic token refresh coordinated across browser tabs.
+                        <b>Strengthened client-side session security</b> by building a cross-tab synchronized JWT authentication system using native Web Crypto APIs with silent token refresh.
                     </li>
                     <li>
-                        Delivered a responsive, localized interface using
-                        TanStack Query and Router, Ant Design, and Tailwind CSS.
+                        Enhanced user experience through a localized, responsive dashboard featuring real-time data visualization and simplified workflows.
                     </li>
                 </ul>
             </div>
 
             <div class="entry">
                 <div class="row">
-                    <span class="org">K-Appraisal</span
-                    ><span class="when">Feb 2026 - Apr 2026</span>
+                    <span class="org">K-Appraisal</span><span class="when">Feb 2026 - Apr 2026</span>
                 </div>
                 <div class="sub">
-                    <span class="pos"
-                        >Software Developer &middot; Full-time</span
-                    ><span class="loc">Jakarta, Indonesia</span>
+                    <span class="pos">Software Developer &middot; Full-time</span><span class="loc">Jakarta, Indonesia</span>
                 </div>
                 <ul>
                     <li>
-                        Engineered a scalable full-stack business-digitalization
-                        platform using React and .NET to streamline enterprise
-                        workflows.
+                        <b>Architected scalable enterprise microservices</b> across core business domains using ASP.NET Core and React, decoupling monolithic workflows into maintainable distributed services.
                     </li>
                     <li>
-                        Architected database schemas and system data flows for a
-                        distributed microservices architecture, ensuring high
-                        availability.
+                        <b>Decoupled high-volume asynchronous tasks</b> by implementing event-driven message queuing with RabbitMQ, preventing workflow bottlenecks and ensuring eventual consistency across services.
                     </li>
                     <li>
-                        Implemented secure authentication, CRUD operations, and
-                        strict Role-Based Access Control (RBAC).
+                        <b>Hardened enterprise API security</b> by engineering fine-grained Role-Based Access Control (RBAC) and JWT validation across all service entry points.
                     </li>
                     <li>
-                        Developed dynamic PDF generation with templating
-                        capabilities for flexible business needs.
+                        <b>Automated reporting workflows</b> by building a dynamic PDF generation engine supporting customized business templates, eliminating manual report assembly.
                     </li>
                     <li>
-                        Built event-driven services using RabbitMQ for
-                        streamlined business workflows.
+                        <b>Enhanced data reliability and transaction integrity</b> by normalizing relational database schemas and establishing structured repository patterns in C#/.NET.
                     </li>
                 </ul>
             </div>
 
             <div class="entry">
                 <div class="row">
-                    <span class="org">Apple Developer Academy</span
-                    ><span class="when">Mar 2025 - Dec 2025</span>
+                    <span class="org">Apple Developer Academy</span><span class="when">Mar 2025 - Dec 2025</span>
                 </div>
                 <div class="sub">
-                    <span class="pos"
-                        >Apple Platform Developer &middot; Internship</span
-                    ><span class="loc">South Tangerang, Indonesia</span>
+                    <span class="pos">Apple Platform Developer &middot; Internship</span><span class="loc">South Tangerang, Indonesia</span>
                 </div>
                 <ul>
                     <li>
-                        Engineered native iOS and iPadOS applications with
-                        Swift, SwiftUI, and SwiftData, focused on reactive,
-                        user-centric interfaces.
+                        <b>Shipped production-grade native iOS/iPadOS applications</b> utilizing Swift, SwiftUI, and SwiftData, prioritizing reactive UIs, data persistence, and fluid user interactions.
                     </li>
                     <li>
-                        Participated in end-to-end product lifecycles,
-                        translating user research and prototyping into
-                        functional UI/UX designs.
+                        <b>Drove end-to-end product delivery cycles</b> within an agile environment, iterating from rapid interactive prototyping and user research to final app builds.
                     </li>
                     <li>
-                        Architected cloud-based backend services and REST APIs
-                        with FastAPI and Supabase for real-time data
-                        synchronization.
+                        <b>Architected cloud-based backend services and REST APIs</b> leveraging FastAPI and Supabase for real-time data synchronization.
                     </li>
                 </ul>
             </div>
 
             <div class="entry">
                 <div class="row">
-                    <span class="org">Alto Network</span
-                    ><span class="when">Sep 2024 - Dec 2024</span>
+                    <span class="org">Alto Network</span><span class="when">Sep 2024 - Dec 2024</span>
                 </div>
                 <div class="sub">
-                    <span class="pos"
-                        >Backend Developer &middot; Internship</span
-                    ><span class="loc">Jakarta, Indonesia</span>
+                    <span class="pos">Backend Developer &middot; Internship</span><span class="loc">Jakarta, Indonesia</span>
                 </div>
                 <ul>
                     <li>
-                        Developed backend APIs and internal reporting systems
-                        with Java Spring Boot, optimizing secure data retrieval.
+                        <b>Engineered robust RESTful backend services and reporting systems</b> with Java Spring Boot to facilitate secure, high-integrity financial network data processing.
                     </li>
                     <li>
-                        Created ERD and DFD documentation to bridge business
-                        requirements with technical system implementations.
+                        <b>Accelerated developer onboarding and feature delivery</b> by creating standardized ERD and DFD technical documentation across complex integration touchpoints.
                     </li>
                     <li>
-                        Collaborated cross-functionally to ensure data accuracy,
-                        system reliability, and seamless API integrations.
+                        <b>Collaborated cross-functionally to ensure strict data accuracy</b>, system reliability, and seamless API integrations.
                     </li>
                 </ul>
             </div>
 
             <div class="entry">
                 <div class="row">
-                    <span class="org">Bakrie Center Foundation</span
-                    ><span class="when">Feb 2024 - Jul 2024</span>
+                    <span class="org">Bakrie Center Foundation</span><span class="when">Feb 2024 - Jul 2024</span>
                 </div>
                 <div class="sub">
-                    <span class="pos"
-                        >Software Engineer &middot; Internship</span
-                    ><span class="loc">Jakarta, Indonesia</span>
+                    <span class="pos">Software Engineer &middot; Internship</span><span class="loc">Jakarta, Indonesia</span>
                 </div>
                 <ul>
                     <li>
-                        Designed and implemented a highly normalized MySQL
-                        schema to securely support core application features.
+                        <b>Led technical project execution and team delivery</b> as PIC, coordinating sprint milestones, conducting code reviews, and aligning business requirements with engineering output.
                     </li>
                     <li>
-                        Built scalable RESTful backend services with Node.js to
-                        handle complex business logic and streamline data
-                        access.
+                        <b>Architected normalized MySQL database schemas</b> to secure mission-critical data models and minimize transactional redundancy.
                     </li>
                     <li>
-                        Acted as technical PIC, coordinating tasks, conducting
-                        code reviews, and communicating requirements with
-                        stakeholders.
+                        <b>Developed scalable Node.js REST APIs</b> to power core institutional application workflows and streamline client-side data access.
                     </li>
                 </ul>
             </div>
@@ -340,31 +318,23 @@
             <h2>Selected Projects</h2>
             <div class="entry">
                 <div class="row">
-                    <span class="org">Medical Visual Question Answering</span
-                    ><span class="when">Freelance</span>
+                    <span class="org">Medical Visual Question Answering</span><span class="when">Freelance Full-Stack Developer</span>
                 </div>
                 <ul>
                     <li>
-                        Built a medical visual-question-answering system with
-                        TensorFlow, a custom image-upload interface, and a
-                        medical knowledge-base API integration.
-                        <span class="tags"
-                            >(Python, TensorFlow, Medical AI)</span
-                        >
+                        Developed a medical visual question answering system using TensorFlow. Implemented a custom image upload interface and integrated with a medical knowledge base API to provide accurate answers to medical questions.
+                        <span class="tags">(Python, TensorFlow, Medical AI, Fullstack Development)</span>
                     </li>
                 </ul>
             </div>
             <div class="entry">
                 <div class="row">
-                    <span class="org">Contraction Timer iOS App</span
-                    ><span class="when">Freelance</span>
+                    <span class="org">Contraction Timer iOS App</span><span class="when">Freelance iOS Developer</span>
                 </div>
                 <ul>
                     <li>
-                        Designed and shipped a native iOS utility with a
-                        reactive UI for tracking contraction frequency, custom
-                        tab views, and swipe-to-edit/delete actions.
-                        <span class="tags">(SwiftUI, Reactive UI)</span>
+                        Designed and developed a native iOS utility app with a highly reactive UI for calculating contraction frequency. Features include custom tab views and intuitive swipe actions for editing and deleting records.
+                        <span class="tags">(SwiftUI, Reactive UI, Mobile Development, UX/UI)</span>
                     </li>
                 </ul>
             </div>
@@ -372,26 +342,50 @@
 
         <section>
             <h2>Skills</h2>
-            <div class="skillrow">
-                <b>Backend &amp; APIs</b>
-                <span class="tags"
-                    >C#, .NET, Node.js, Java, Spring Boot, Python, FastAPI,
-                    Go</span
-                >
+            <div class="skill-category">
+                <span class="skill-label">Backend &amp; APIs</span>
+                <div class="skill-tags">
+                    <span class="skill-pill">C#</span>
+                    <span class="skill-pill">.NET</span>
+                    <span class="skill-pill">Node.js</span>
+                    <span class="skill-pill">Java</span>
+                    <span class="skill-pill">Spring Boot</span>
+                    <span class="skill-pill">Python</span>
+                    <span class="skill-pill">FastAPI</span>
+                    <span class="skill-pill">Go</span>
+                </div>
             </div>
-            <div class="skillrow">
-                <b>Frontend &amp; Mobile</b>
-                <span class="tags"
-                    >React, TypeScript, TanStack, Tailwind CSS, Swift, SwiftUI,
-                    SwiftData</span
-                >
+            <div class="skill-category">
+                <span class="skill-label">Frontend &amp; Mobile</span>
+                <div class="skill-tags">
+                    <span class="skill-pill">React</span>
+                    <span class="skill-pill">TypeScript</span>
+                    <span class="skill-pill">TanStack</span>
+                    <span class="skill-pill">Tailwind CSS</span>
+                    <span class="skill-pill">Swift</span>
+                    <span class="skill-pill">SwiftUI</span>
+                    <span class="skill-pill">SwiftData</span>
+                </div>
             </div>
-            <div class="skillrow">
-                <b>Data &amp; Architecture</b>
-                <span class="tags"
-                    >PostgreSQL, MySQL, Prisma, Supabase, RabbitMQ,
-                    Microservices</span
-                >
+            <div class="skill-category">
+                <span class="skill-label">Database &amp; Architecture</span>
+                <div class="skill-tags">
+                    <span class="skill-pill">PostgreSQL</span>
+                    <span class="skill-pill">MySQL</span>
+                    <span class="skill-pill">Prisma</span>
+                    <span class="skill-pill">Supabase</span>
+                    <span class="skill-pill">RabbitMQ</span>
+                    <span class="skill-pill">Microservices</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <span class="skill-label">Soft Skills &amp; Leadership</span>
+                <div class="skill-tags">
+                    <span class="skill-pill">Leadership</span>
+                    <span class="skill-pill">Communication</span>
+                    <span class="skill-pill">Problem Solving</span>
+                    <span class="skill-pill">Team Collaboration</span>
+                </div>
             </div>
         </section>
 
@@ -399,27 +393,18 @@
             <h2>Education &amp; Awards</h2>
             <div class="entry">
                 <div class="row">
-                    <span class="org"
-                        >Universitas Pembangunan Nasional Veteran Jakarta</span
-                    ><span class="when">Aug 2021 - Sep 2025</span>
+                    <span class="org">Universitas Pembangunan Nasional Veteran Jakarta</span><span class="when">Aug 2021 - Sep 2025</span>
                 </div>
                 <div class="sub">
-                    <span class="pos"
-                        >Bachelor of Computer Science &middot; GPA 3.87 /
-                        4.0</span
-                    ><span class="loc">Jakarta, Indonesia</span>
+                    <span class="pos">Bachelor of Computer Science &middot; GPA 3.87 / 4.0</span><span class="loc">Jakarta, Indonesia</span>
                 </div>
             </div>
             <div class="entry">
                 <div class="row">
-                    <span class="org">Gemastik Finalist</span
-                    ><span class="when">Nov 2022</span>
+                    <span class="org">Gemastik Finalist</span><span class="when">Nov 2022</span>
                 </div>
                 <div class="sub">
-                    <span class="pos"
-                        >Top 10 nationally in the Kemendikbudristek IT
-                        competition</span
-                    ><span class="loc">Project: ANKERSAL</span>
+                    <span class="pos">Top 10 nationally in Kemendikbudristek's Gemastik IT competition</span><span class="loc">Project: ANKERSAL (Bootstrap, PHP)</span>
                 </div>
             </div>
         </section>
