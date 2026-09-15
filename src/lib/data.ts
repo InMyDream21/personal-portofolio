@@ -52,11 +52,11 @@ export const experiences: Experience[] = [
     type: "Full-time",
     location: "BSD, Indonesia",
     responsibilities: [
-      "Scaled end-to-end logistics platform throughput to handle 5,000+ daily active orders by engineering a high-performance backend with ElysiaJS/Bun and a React 19 (TanStack Start) frontend in a pnpm monorepo.",
-      "Boosted routing efficiency and delivery precision by extracting historical tracking data and dynamically calculating GraphHopper via-points between designated route stops.",
-      "Optimized spatial query latency for real-time fleet positions and boundary triggers by architecting geospatial schemas in PostgreSQL/PostGIS using Prisma.",
-      "Strengthened client-side session security by building a cross-tab synchronized JWT authentication system using native Web Crypto APIs with silent token refresh.",
-      "Enhanced user experience through a localized, responsive dashboard featuring real-time data visualization and simplified workflows.",
+      "Scaled an end-to-end logistics platform to process 5,000+ daily active orders, engineering high-throughput backend services with ElysiaJS/Bun and a React 19 (TanStack Start) frontend in a pnpm monorepo.",
+      "Boosted routing efficiency and delivery precision by extracting historical tracking data to dynamically calculate GraphHopper via-points between scheduled stops.",
+      "Optimized spatial query performance for real-time fleet positioning and geofence boundary triggers by designing PostGIS schemas with Prisma.",
+      "Architected a multi-tenant edge-cloud CCTV platform using FastAPI, implementing JWT-scoped tenant authentication, live video relays with auto-fallback, and an outbox pattern with idempotent handlers for resilient edge-to-cloud sync during network drops.",
+      "Developed a real-time monitoring dashboard with React, Vite, and Tailwind CSS, streaming live feeds, detection alerts, and AI pipeline recordings with role-based access control and offline-aware state management.",
     ],
   },
   {
