@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import SiteChrome from "@/components/SiteChrome";
 import { personalInfo } from "@/lib/data";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -36,11 +35,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  colorScheme: "light dark",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#030712" },
-  ],
+  colorScheme: "light",
+  themeColor: "#f4f0e8",
 };
 
 const personJsonLd = {
@@ -68,13 +64,10 @@ export default function RootLayout({
             __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
           }}
         />
-        <a href="#main" className="skip-link">
+        <a href="#content" className="skip-link">
           Skip to content
         </a>
-        <div className="bg-glow" />
-        <Header />
-        {children}
-        <Footer />
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );
