@@ -16,10 +16,12 @@ export interface Education {
 }
 
 export interface Award {
+  type: "Achievement" | "Publication";
   title: string;
   date: string;
   description: string;
   project?: string;
+  url?: string;
 }
 
 export interface SkillCategory {
@@ -123,11 +125,21 @@ export const education: Education[] = [
 
 export const awards: Award[] = [
   {
+    type: "Achievement",
     title: "Gemastik Finalist",
     date: "Nov 2022",
     description:
       "Top 10 nationally in Kemendikbudristek's Gemastik IT competition.",
-    project: "ANKERSAL (Bootstrap, PHP)",
+    project: "ANKERSAL",
+  },
+  {
+    type: "Publication",
+    title:
+      "Identifikasi Wajah Asli dan Buatan Deepfake Menggunakan Metode Convolutional Neural Network",
+    date: "Jan 2024",
+    description:
+      "Published in Teknika. Applied a Convolutional Neural Network to distinguish real faces from deepfakes.",
+    url: "https://ejournal.ikado.ac.id/index.php/teknika/article/view/705",
   },
 ];
 

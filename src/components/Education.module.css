@@ -96,6 +96,18 @@
     color: var(--gray);
 }
 
+.awardLink {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--card-border);
+    text-underline-offset: 4px;
+}
+
+.awardLink:hover,
+.awardLink:focus-visible {
+    text-decoration-color: currentColor;
+}
+
 .projectBadge {
     background: var(--gray-light);
     color: var(--gray-dark);

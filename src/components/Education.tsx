@@ -1,10 +1,14 @@
-import { education, awards } from '@/lib/data';
-import { GraduationCap } from 'lucide-react';
-import styles from './Education.module.css';
+import { education, awards } from "@/lib/data";
+import { GraduationCap } from "lucide-react";
+import styles from "./Education.module.css";
 
 const Education = () => {
   return (
-    <section id="education" className="container" aria-label="Education and background">
+    <section
+      id="education"
+      className="container"
+      aria-label="Education and background"
+    >
       <div className={styles.sectionHeader}>
         <GraduationCap className={styles.icon} aria-hidden />
         <h2>Education & Background</h2>
@@ -27,11 +31,24 @@ const Education = () => {
           </div>
         </div>
         <div className={`fade-in stagger-2 ${styles.columnCard}`}>
-          <h3 className={styles.cardTitle}>Awards</h3>
+          <h3 className={styles.cardTitle}>Achievements & Publications</h3>
           <div className={styles.list}>
             {awards.map((award, index) => (
               <div key={index} className={styles.item}>
-                <h4 className={styles.awardTitle}>{award.title}</h4>
+                <h4 className={styles.awardTitle}>
+                  {award.url ? (
+                    <a
+                      href={award.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.awardLink}
+                    >
+                      {award.title}
+                    </a>
+                  ) : (
+                    award.title
+                  )}
+                </h4>
                 <p className={styles.awardDesc}>{award.description}</p>
                 {award.project && (
                   <div className={styles.projectBadge}>

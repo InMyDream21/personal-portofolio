@@ -190,8 +190,18 @@ export default function PortfolioPreview() {
           ))}
           {awards.map((award) => (
             <article key={`${award.title}-${award.date}`}>
-              <p className={styles.role}>Achievement · {award.date}</p>
-              <h3>{award.title}</h3>
+              <p className={styles.role}>
+                {award.type} · {award.date}
+              </p>
+              <h3>
+                {award.url ? (
+                  <a href={award.url} target="_blank" rel="noopener noreferrer">
+                    {award.title}
+                  </a>
+                ) : (
+                  award.title
+                )}
+              </h3>
               <p>{award.description}</p>
               {award.project && <p>{award.project}</p>}
             </article>
