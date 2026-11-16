@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import SiteChrome from "@/components/SiteChrome";
-import { personalInfo } from "@/lib/data";
+import { education, experiences, personalInfo } from "@/lib/data";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "profile",
     url: personalInfo.siteUrl,
-    siteName: `${personalInfo.name} — Portfolio`,
+    siteName: `${personalInfo.name} | Portfolio`,
     title,
     description: personalInfo.metaDescription,
     locale: "en_US",
@@ -47,6 +46,14 @@ const personJsonLd = {
   email: `mailto:${personalInfo.email}`,
   url: personalInfo.siteUrl,
   address: { "@type": "PostalAddress", addressLocality: personalInfo.location },
+  worksFor: {
+    "@type": "Organization",
+    name: experiences[0]?.company,
+  },
+  alumniOf: education.map((edu) => ({
+    "@type": "CollegeOrUniversity",
+    name: edu.institution,
+  })),
   sameAs: [personalInfo.github, personalInfo.linkedin],
 };
 
@@ -67,7 +74,7 @@ export default function RootLayout({
         <a href="#content" className="skip-link">
           Skip to content
         </a>
-        <SiteChrome>{children}</SiteChrome>
+        {children}
       </body>
     </html>
   );

@@ -30,6 +30,14 @@ export interface SkillCategory {
   skills: string[];
 }
 
+export interface Project {
+  title: string;
+  role: string;
+  description: string;
+  tags: string[];
+  url?: string;
+}
+
 export const personalInfo = {
   name: "Ahmed Nizhan Haikal",
   jobTitle: "Backend & Full-Stack Developer",
@@ -41,16 +49,24 @@ export const personalInfo = {
   linkedin: "https://www.linkedin.com/in/nizhan-haikal/",
   // Short, SERP-safe (<160 chars). Full version lives in `summary` for on-page copy.
   metaDescription:
-    "Backend & full-stack developer building scalable APIs and systems with .NET, Node.js, Java, and React. CS graduate with internship and real-world experience.",
+    "Backend & full-stack developer building scalable APIs and systems with .NET, Node.js, Java, and React. Backend Developer at OLX Indonesia.",
   summary:
     "Full-Stack & Backend Engineer with extensive experience architecting event-driven microservices, high-throughput APIs, and distributed data systems using .NET Core, Java Spring Boot, Node.js/Bun, and PostgreSQL/PostGIS. Proven track record of scaling logistics and enterprise platforms to 5,000+ daily orders and implementing secure RBAC, asynchronous messaging via RabbitMQ, and geospatial indexing. CS graduate (3.87 GPA) and Apple Developer Academy alumnus experienced in cross-functional agile teams.",
 };
 
 export const experiences: Experience[] = [
   {
+    company: "OLX Indonesia",
+    role: "Backend Developer",
+    period: "Nov 2026 - Present",
+    type: "Full-time",
+    location: "Jakarta, Indonesia",
+    responsibilities: [],
+  },
+  {
     company: "Sagara Technology",
     role: "Fullstack Developer (Outsource at Treffix)",
-    period: "May 2026 - Present",
+    period: "May 2026 - Nov 2026",
     type: "Full-time",
     location: "BSD, Indonesia",
     responsibilities: [
@@ -152,6 +168,8 @@ export const skillCategories: SkillCategory[] = [
       "C#",
       ".NET",
       "Node.js",
+      "Bun",
+      "ElysiaJS",
       "Java",
       "Spring Boot",
       "Python",
@@ -167,6 +185,7 @@ export const skillCategories: SkillCategory[] = [
       "React",
       "TypeScript",
       "TanStack",
+      "Vite",
       "Tailwind CSS",
       "Swift",
       "SwiftUI",
@@ -176,9 +195,10 @@ export const skillCategories: SkillCategory[] = [
   {
     category: "Database & Architecture",
     description:
-      "Designing normalized schemas and managing data flow for complex applications.",
+      "Designing normalized schemas, spatial indexes, and resilient message-driven data flows.",
     skills: [
       "PostgreSQL",
+      "PostGIS",
       "MySQL",
       "Prisma",
       "Supabase",
@@ -199,7 +219,7 @@ export const skillCategories: SkillCategory[] = [
   },
 ];
 
-export const freelanceProjects = [
+export const freelanceProjects: Project[] = [
   {
     title: "Medical Visual Question Answering",
     role: "Freelance Full-Stack Developer",

@@ -25,13 +25,14 @@ export default function PortfolioPreview() {
           <a href="#work">Work</a>
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
+          <a href="#background">Background</a>
           <a href="#contact">Contact</a>
         </nav>
         <a
           className={styles.headerContact}
           href={`mailto:${personalInfo.email}`}
         >
-          Contact
+          Email me
         </a>
       </header>
 
@@ -41,16 +42,20 @@ export default function PortfolioPreview() {
         aria-labelledby="hero-title"
       >
         <p className={styles.eyebrow}>
-          Ahmed Nizhan Haikal · Jakarta, Indonesia
+          {personalInfo.name} · {personalInfo.jobTitle} ·{" "}
+          {personalInfo.location}
         </p>
         <h1 id="hero-title">
           I build the systems that let products keep their promises.
         </h1>
         <div className={styles.heroLower}>
-          <p>
-            Backend and full-stack engineer focused on dependable APIs,
-            event-driven services, and data-heavy products.
-          </p>
+          <div className={styles.heroCopy}>
+            <p className={styles.heroLead}>
+              Backend and full-stack engineer focused on dependable APIs,
+              event-driven services, and data-heavy products.
+            </p>
+            <p className={styles.heroSummary}>{personalInfo.summary}</p>
+          </div>
           <div className={styles.actions}>
             <a
               className={styles.primaryAction}
@@ -69,21 +74,12 @@ export default function PortfolioPreview() {
         </div>
       </section>
 
-      <section className={styles.profile} aria-label="Profile">
-        <p>{personalInfo.name}</p>
-        <p>{personalInfo.jobTitle}</p>
-        <p>{personalInfo.location}</p>
-      </section>
-
       <section className={styles.work} id="work" aria-labelledby="work-title">
         <div className={styles.sectionLead}>
-          <p className={styles.sectionIndex}>01</p>
-          <div>
-            <p className={styles.kicker}>A record of shipping</p>
-            <h2 id="work-title">
-              Experience built around systems that have to work.
-            </h2>
-          </div>
+          <p className={styles.sectionIndex}>01 / Career</p>
+          <h2 id="work-title">
+            Experience built around systems that have to work.
+          </h2>
         </div>
         <ol className={styles.experienceList}>
           {experiences.map((experience) => (
@@ -95,14 +91,22 @@ export default function PortfolioPreview() {
               <div>
                 <h3>{experience.company}</h3>
                 <p className={styles.role}>{experience.role}</p>
+                <p className={styles.experienceMeta}>
+                  {experience.type}
+                  {experience.location ? ` · ${experience.location}` : ""}
+                </p>
               </div>
-              <ul>
-                {experience.responsibilities
-                  .slice(0, 2)
-                  .map((responsibility) => (
+              {experience.responsibilities.length > 0 ? (
+                <ul>
+                  {experience.responsibilities.map((responsibility) => (
                     <li key={responsibility}>{responsibility}</li>
                   ))}
-              </ul>
+                </ul>
+              ) : (
+                <p className={styles.currentRoleNote}>
+                  Recently joined the backend engineering team in Jakarta.
+                </p>
+              )}
             </li>
           ))}
         </ol>
@@ -114,23 +118,22 @@ export default function PortfolioPreview() {
         aria-labelledby="projects-title"
       >
         <div className={styles.sectionLead}>
-          <p className={styles.sectionIndex}>02</p>
-          <div>
-            <p className={styles.kicker}>Independent work</p>
-            <h2 id="projects-title">
-              Selected projects, kept close to the problem.
-            </h2>
-          </div>
+          <p className={styles.sectionIndex}>02 / Independent Work</p>
+          <h2 id="projects-title">
+            Selected projects, kept close to the problem.
+          </h2>
         </div>
         <div className={styles.projectList}>
           {freelanceProjects.map((project, index) => (
             <article className={styles.project} key={project.title}>
-              <p className={styles.projectNumber}>0{index + 1}</p>
-              <div>
-                <p className={styles.role}>{project.role}</p>
-                <h3>{project.title}</h3>
+              <div className={styles.projectHeader}>
+                <span className={styles.projectNumber}>0{index + 1}</span>
+                <div>
+                  <h3>{project.title}</h3>
+                  <p className={styles.role}>{project.role}</p>
+                </div>
               </div>
-              <p>{project.description}</p>
+              <p className={styles.projectDescription}>{project.description}</p>
               <ul
                 className={styles.tags}
                 aria-label={`${project.title} technologies`}
@@ -150,14 +153,11 @@ export default function PortfolioPreview() {
         aria-labelledby="skills-title"
       >
         <div className={styles.sectionLead}>
-          <p className={styles.sectionIndex}>03</p>
-          <div>
-            <p className={styles.kicker}>Tools I reach for</p>
-            <h2 id="skills-title">A practical stack, shaped by the work.</h2>
-          </div>
+          <p className={styles.sectionIndex}>03 / Technical Stack</p>
+          <h2 id="skills-title">A practical stack, shaped by the work.</h2>
         </div>
         <div className={styles.skillColumns}>
-          {skillCategories.slice(0, 3).map((category) => (
+          {skillCategories.map((category) => (
             <article key={category.category}>
               <h3>{category.category}</h3>
               <p>{category.description}</p>
@@ -171,39 +171,49 @@ export default function PortfolioPreview() {
         </div>
       </section>
 
-      <section className={styles.education} aria-labelledby="education-title">
-        <div>
-          <p className={styles.sectionIndex}>04</p>
-          <h2 id="education-title">Background</h2>
+      <section
+        className={styles.education}
+        id="background"
+        aria-labelledby="education-title"
+      >
+        <div className={styles.educationLead}>
+          <p className={styles.sectionIndex}>04 / Background</p>
+          <h2 id="education-title">Education, Awards &amp; Research</h2>
         </div>
         <div>
           {education.map((item) => (
             <article key={item.institution}>
+              <p className={styles.awardMeta}>Education · {item.period}</p>
               <h3>{item.degree}</h3>
               <p>
                 {item.institution}, {item.location}
               </p>
-              <p>
-                {item.period} · GPA {item.gpa}
-              </p>
+              <p>GPA {item.gpa}</p>
             </article>
           ))}
           {awards.map((award) => (
             <article key={`${award.title}-${award.date}`}>
-              <p className={styles.role}>
+              <p className={styles.awardMeta}>
                 {award.type} · {award.date}
               </p>
               <h3>
                 {award.url ? (
-                  <a href={award.url} target="_blank" rel="noopener noreferrer">
-                    {award.title}
+                  <a
+                    href={award.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.awardLink}
+                  >
+                    <span>{award.title}</span>
+                    <ArrowUpRight aria-hidden="true" size={16} />
+                    <span className="sr-only"> (opens in new tab)</span>
                   </a>
                 ) : (
                   award.title
                 )}
               </h3>
               <p>{award.description}</p>
-              {award.project && <p>{award.project}</p>}
+              {award.project && <p>Project: {award.project}</p>}
             </article>
           ))}
         </div>
@@ -211,8 +221,10 @@ export default function PortfolioPreview() {
 
       <footer className={styles.footer} id="contact">
         <div>
-          <p className={styles.kicker}>Let&apos;s talk</p>
-          <a href={`mailto:${personalInfo.email}`}>{personalInfo.email}</a>
+          <p className={styles.kicker}>Direct contact</p>
+          <a className={styles.footerEmail} href={`mailto:${personalInfo.email}`}>
+            {personalInfo.email}
+          </a>
         </div>
         <div className={styles.socials} aria-label="Social links">
           <a
@@ -221,6 +233,7 @@ export default function PortfolioPreview() {
             rel="noopener noreferrer"
           >
             <Github aria-hidden="true" size={18} /> GitHub
+            <span className="sr-only"> (opens in new tab)</span>
           </a>
           <a
             href={personalInfo.linkedin}
@@ -228,6 +241,7 @@ export default function PortfolioPreview() {
             rel="noopener noreferrer"
           >
             <Linkedin aria-hidden="true" size={18} /> LinkedIn
+            <span className="sr-only"> (opens in new tab)</span>
           </a>
           <a href={`mailto:${personalInfo.email}`}>
             <Mail aria-hidden="true" size={18} /> Email

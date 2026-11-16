@@ -29,7 +29,7 @@ export default function Image() {
           color: "#ae351a",
         }}
       >
-        Available for opportunities
+        {personalInfo.location}
       </div>
       <div
         style={{
